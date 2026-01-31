@@ -1,0 +1,179 @@
+.profile-container {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url("/profile-bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+
+
+
+
+.profile-card {
+  width: 420px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  width: 70px;   /* was 100px */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50;
+}
+
+
+.profile-photo input {
+  margin-top: 10px;
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-card input,
+.profile-card select,
+.profile-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.profile-card button {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-card button:hover {
+  background: #388e3c;
+}
+
+/* ===== Photo Edit Icon ===== */
+
+.photo-wrapper {
+  position: relative;
+}
+
+.photo-edit-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.photo-edit-btn:hover {
+  background: #388e3c;
+}
+
+
+.form-group {
+  margin-bottom: 10px; /* was 14px */
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+
+/* Optional polish */
+.form-group input:disabled,
+.form-group textarea:disabled,
+.form-group select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .profile-container {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .profile-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .profile-photo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-card h2 {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .profile-card input,
+  .profile-card select,
+  .profile-card textarea {
+    padding: 8px;   /* better touch area */
+    font-size: 14px;
+  }
+
+  .profile-card button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .profile-card {
+    width: 90%;
+    max-width: 520px;
+  }
+}
+
+/* Large devices (desktop) */
+@media (min-width: 769px) {
+  .profile-card {
+    width: 420px; /* your original size */
+  }
+}
